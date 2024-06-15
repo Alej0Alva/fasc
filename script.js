@@ -43,4 +43,4 @@ nextBtn.addEventListener('click', nextImage);
 // Mostrar imagen al azar al cargar la página
 showImage(currentIndex);
 
-setInterval(nextImage, 10000); // Cambia la imagen cada 10 segundos
+setInterval(nextImage, 60000); // Cambia la imagen cada 60 segundos
