@@ -4,33 +4,50 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
 }
 
-.carousel-container {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    overflow: hidden;
-    border: 2px solid #ccc;
+.carousel-wrapper {
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
 }
 
-.carousel-container img {
+.carousel {
+    position: relative;
     width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    min-width: 100%;
     display: block;
 }
 
 .carousel-button {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 18px;
 }
 
 #prevBtn {
