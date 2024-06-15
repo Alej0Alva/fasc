@@ -1,4 +1,10 @@
-const images = ['images/img_001.jpg', 'images/img_002.jpg', 'images/img_003.jpg', 'images/img_004.jpg', 'images/img_005.jpg', 
+const images = [];
+
+
+
+
+const images = [
+                'images/img_001.jpg', 'images/img_002.jpg', 'images/img_003.jpg', 'images/img_004.jpg', 'images/img_005.jpg', 
                 'images/img_006.jpg', 'images/img_007.jpg', 'images/img_008.jpg', 'images/img_009.jpg', 'images/img_010.jpg', 
                 'images/img_011.jpg', 'images/img_012.jpg', 'images/img_013.jpg', 'images/img_014.jpg', 'images/img_015.jpg', 
                 'images/img_016.jpg', 'images/img_017.jpg', 'images/img_018.jpg', 'images/img_019.jpg', 'images/img_020.jpg', 
@@ -16,15 +22,27 @@ const images = ['images/img_001.jpg', 'images/img_002.jpg', 'images/img_003.jpg'
                 'images/img_076.jpg', 'images/img_077.jpg', 'images/img_078.jpg', 'images/img_079.jpg', 'images/img_080.jpg', 
                 'images/img_081.jpg', 'images/img_082.jpg', 'images/img_083.jpg', 'images/img_084.jpg', 'images/img_085.jpg', 
                 'images/img_086.jpg', 'images/img_087.jpg', 'images/img_088.jpg', 'images/img_089.jpg', 'images/img_090.jpg', 
-                'images/img_091.jpg', 'images/img_092.jpg'];
+                'images/img_091.jpg', 'images/img_092.jpg'
+
+];
 let currentIndex = 0;
 
-const carouselImage = document.getElementById('carouselImage');
+const carouselImages = document.getElementById('carouselImages');
+
+// Inserta las imágenes en el contenedor
+images.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'carousel-image';
+    carouselImages.appendChild(img);
+});
+
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 function showImage(index) {
-    carouselImage.src = images[index];
+    const offset = -index * 100;
+    carouselImages.style.transform = `translateX(${offset}%)`;
 }
 
 function prevImage() {
@@ -41,3 +59,4 @@ prevBtn.addEventListener('click', prevImage);
 nextBtn.addEventListener('click', nextImage);
 
 setInterval(nextImage, 10000); // Cambia la imagen cada 10 segundos
+
