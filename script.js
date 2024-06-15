@@ -52,7 +52,6 @@ function initCarousel() {
     images.forEach((src, index) => {
         const img = document.createElement('img');
         img.src = src;
-        img.style.opacity = 0;
         document.querySelector('.image-wrapper').appendChild(img);
     });
     showImage(currentIndex);
