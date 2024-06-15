@@ -4,45 +4,40 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #000000; /* Fondo negro */
+    background-color: #000; /* Fondo negro */
 }
 
 .carousel-container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 800px;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
     display: flex;
+    flex-direction: column; /* Cambiado a columna */
     align-items: center;
-    justify-content: center;
+    border: 2px solid #ccc;
 }
 
 .image-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
-.carousel-container img {
+.image-wrapper img {
     width: 100%;
-    height: auto;
-    max-height: 90vh;
-    object-fit: contain;
     display: block;
 }
 
 .button-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .carousel-button {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 2rem;
-    cursor: pointer;
     padding: 10px;
+    cursor: pointer;
 }
