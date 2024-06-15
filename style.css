@@ -9,44 +9,40 @@ body {
 
 .carousel-container {
     position: relative;
-    width: 80%;
-    max-width: 600px;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .image-wrapper {
-    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-container img {
     width: 100%;
     height: auto;
+    max-height: 90vh;
+    object-fit: contain;
     display: block;
-    -webkit-user-select: none;
-    margin: auto;
-    background-color: hsl(0, 0%, 90%);
-    transition: background-color 300ms;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .carousel-button {
-    position: absolute;
     background-color: transparent;
     color: white;
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
     padding: 10px;
-}
-
-#prevBtn {
-    left: 10px;
-}
-
-#nextBtn {
-    right: 10px;
 }
