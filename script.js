@@ -1,8 +1,3 @@
-const images = [];
-
-
-
-
 const images = [
                 'images/img_001.jpg', 'images/img_002.jpg', 'images/img_003.jpg', 'images/img_004.jpg', 'images/img_005.jpg', 
                 'images/img_006.jpg', 'images/img_007.jpg', 'images/img_008.jpg', 'images/img_009.jpg', 'images/img_010.jpg', 
