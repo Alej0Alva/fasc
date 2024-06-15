@@ -19,6 +19,7 @@ const images = [
     'images/img_086.jpg', 'images/img_087.jpg', 'images/img_088.jpg', 'images/img_089.jpg', 'images/img_090.jpg', 
     'images/img_091.jpg', 'images/img_092.jpg'
 ];
+
 let currentIndex = Math.floor(Math.random() * images.length);
 
 const carouselImage = document.getElementById('carouselImage');
@@ -26,7 +27,7 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 function showImage(index) {
-    const allImages = document.querySelectorAll('.carousel-container img');
+    const allImages = document.querySelectorAll('.image-wrapper img');
     allImages.forEach((img, i) => {
         if (i === index) {
             img.classList.add('active');
@@ -52,7 +53,7 @@ function initCarousel() {
         const img = document.createElement('img');
         img.src = src;
         img.style.opacity = 0;
-        document.querySelector('.carousel-container').appendChild(img);
+        document.querySelector('.image-wrapper').appendChild(img);
     });
     showImage(currentIndex);
 }
